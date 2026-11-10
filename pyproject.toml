@@ -1,6 +1,6 @@
 [project]
 name = "tiny-quotient-filter"
-version = "0.1.0"
+version = "0.1.1"
 description = "Fixed-capacity quotient filter for set membership with load-based error rates."
 requires-python = ">=3.10"
 dependencies = []
