@@ -57,3 +57,10 @@ which is indistinguishable from a true positive.
 - `qf.capacity` — number of slots.
 - `qf.load_factor` — fraction of slots occupied, between 0.0 and 1.0.
 - `FullError` — exception raised when inserting into a full filter.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
